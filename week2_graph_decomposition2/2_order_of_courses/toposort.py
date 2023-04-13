@@ -6,11 +6,6 @@ import sys
 from utilities import read_test_cases
 
 
-def dfs(adj, used, order, x):
-    # write your code here
-    pass
-
-
 def parse_input(file_path):
     data = list(map(int, re.split("\s|\n", open(file_path).read())))
     return create_adjacency_list(data)
@@ -21,27 +16,18 @@ def create_adjacency_list(data):
     data = data[2:]
     edges = list(zip(data[0 : (2 * m) : 2], data[1 : (2 * m) : 2]))
     adj = [[] for _ in range(n)]
-    for (a, b) in edges:
+    for a, b in edges:
         adj[a - 1].append(b - 1)
     return adj
 
 
-def is_sink(vertex, not_used):
+def is_sink(not_used):
     return len(not_used) == 0
-
-
-# def create_adjacency_set(adj):
-# adj_set = [set()] * len(adj)
-# for source in range(len(adj)):
-# adj_set[source] = set(adj[source])
-
-# return adj_set
 
 
 def toposort(adj):
     used = [False] * len(adj)
     order = []
-    # adj_set = create_adjacency_set(adj)
 
     def follow_edges(vertex):
         not_used = [vert for vert in adj[vertex] if not used[vert]]
@@ -66,7 +52,6 @@ def toposort(adj):
 
 
 def check_topological_order(adj, order):
-
     while len(order) > 0:
         vertex = order.pop()
         dest = set(adj[vertex])
@@ -80,7 +65,6 @@ def check_topological_order(adj, order):
 INTERACTIVE = False
 
 if __name__ == "__main__":
-
     if INTERACTIVE:
         input = sys.stdin.read()
         data = list(map(int, input.split()))
