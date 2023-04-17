@@ -9,3 +9,5 @@ https://www.coursera.org/learn/algorithms-on-graphs
   - *Checking graph for cycles*: depth first search with post sorting
   - *Topological ordering of DAGs*: dito
   - *Number of strongly connected components of directed graphs*: DFS with counter update in post sorting
+- Week 3:
+  - *Shortest path*: using breadth first search for minimal number of steps from one node to an other
