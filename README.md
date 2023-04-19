@@ -12,3 +12,5 @@ https://www.coursera.org/learn/algorithms-on-graphs
 - Week 3:
   - *Shortest path*: using breadth first search for minimal number of steps from one node to an other
   - *Bipartite graphs*: check if a graph is bipartite using BFS
+- Week 4:
+  - *Shortest path in weighted graph*: impementation of Dijkstra's algorithm
