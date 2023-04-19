@@ -14,3 +14,4 @@ https://www.coursera.org/learn/algorithms-on-graphs
   - *Bipartite graphs*: check if a graph is bipartite using BFS
 - Week 4:
   - *Shortest path in weighted graph*: impementation of Dijkstra's algorithm
+  - *Find negative cycles in directed weighted graph*: using DFS to initialize connected components and then solve the problem using the Bellman-Ford algorithm
