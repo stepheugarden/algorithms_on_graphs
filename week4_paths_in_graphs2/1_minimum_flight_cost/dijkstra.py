@@ -62,9 +62,7 @@ if __name__ == "__main__":
         dest, start = list(map(int, data[-1:-3:-1]))
         print(distance(adj, cost, start - 1, dest - 1))
     else:
-        path, files = read_test_cases.return_path_files(
-            "week4_paths_in_graphs2", "1_minimum_flight_cost"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             start, dest, adj, cost = parse_input(file_path)

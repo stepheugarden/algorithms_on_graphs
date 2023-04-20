@@ -53,9 +53,7 @@ if __name__ == "__main__":
         adj = create_adjacency_list(data)
         print(distance(adj, path_start, path_end))
     else:
-        path, files = read_test_cases.return_path_files(
-            "week3_paths_in_graphs1", "1_flight_segments"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             adj, path_start, path_end = parse_input(file_path)

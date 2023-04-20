@@ -63,9 +63,7 @@ if __name__ == "__main__":
         for x in res:
             print(x + 1, end=" ")
     else:
-        path, files = read_test_cases.return_path_files(
-            "week2_graph_decomposition2", "3_intersection_reachability"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             adj = parse_input(file_path)

@@ -32,7 +32,7 @@ def parse_input(file_path):
 def negative_cycle(adj, cost):
     dist = [math.inf] * len(adj)
 
-    # initialize all connected components using depth first
+    # initialize all connected components using depth first search
     connected_comp = [None] * len(adj)
 
     def dfs(start, adj, comp_id):
@@ -73,9 +73,7 @@ if __name__ == "__main__":
         dest, start = list(map(int, data[-1:-3:-1]))
         print(negative_cycle(adj, cost))
     else:
-        path, files = read_test_cases.return_path_files(
-            "week4_paths_in_graphs2", "1_minimum_flight_cost"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             adj, cost = parse_input(file_path)

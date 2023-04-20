@@ -31,7 +31,7 @@ def toposort(adj):
 
     def follow_edges(vertex):
         not_used = [vert for vert in adj[vertex] if not used[vert]]
-        if is_sink(vertex, not_used):
+        if is_sink(not_used):
             used[vertex] = True
             order.append(vertex)
             return
@@ -73,9 +73,7 @@ if __name__ == "__main__":
         for x in res:
             print(x + 1, end=" ")
     else:
-        path, files = read_test_cases.return_path_files(
-            "week2_graph_decomposition2", "2_order_of_courses"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             adj = parse_input(file_path)

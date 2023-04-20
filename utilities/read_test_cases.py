@@ -1,7 +1,7 @@
 import os
 
 
-def return_path_files(parent, exercise_folder, test_folder="tests"):
+def return_path_files(test_folder="tests"):
     path_to_files = os.path.join(
         os.getcwd(),
         test_folder,

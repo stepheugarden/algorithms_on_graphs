@@ -11,7 +11,7 @@ def create_adjacency_list(data):
     data = data[2:]
     edges = list(zip(data[0 : (2 * m) : 2], data[1 : (2 * m) : 2]))
     adj = [[] for _ in range(n)]
-    for (a, b) in edges:
+    for a, b in edges:
         adj[a - 1].append(b - 1)
     return adj
 
@@ -50,16 +50,13 @@ def acyclic(adj):
 INTERACTIVE = False
 
 if __name__ == "__main__":
-
     if INTERACTIVE:
         input = sys.stdin.read()
         data = list(map(int, input.split()))
         adj = create_adjacency_list(data)
         print(acyclic(adj))
     else:
-        path, files = read_test_cases.return_path_files(
-            "week2_graph_decomposition2", "1_cs_curriculum"
-        )
+        path, files = read_test_cases.return_path_files()
         for file in files:
             file_path = os.path.join(path, file)
             adj = parse_input(file_path)
