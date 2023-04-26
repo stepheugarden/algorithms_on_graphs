@@ -16,3 +16,5 @@ https://www.coursera.org/learn/algorithms-on-graphs
   - *Shortest path in weighted graph*: impementation of Dijkstra's algorithm
   - *Find negative cycles in directed weighted graph*: using DFS to initialize connected components and then solve the problem using the Bellman-Ford algorithm
   - *Currency exchange*: Bellman-Ford algorithm and DFS for finding exchange rates in a graph with possibly negative cycles
+- Week 5:
+  - *Minimal spanning tree*: implemented Kruskal's algorithm using set operations with path compression heuristics
