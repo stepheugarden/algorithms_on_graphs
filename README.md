@@ -18,3 +18,4 @@ https://www.coursera.org/learn/algorithms-on-graphs
   - *Currency exchange*: Bellman-Ford algorithm and DFS for finding exchange rates in a graph with possibly negative cycles
 - Week 5:
   - *Minimal spanning tree*: implemented Kruskal's algorithm using set operations with path compression heuristics
+  - *Clustering*: minimal distance between clusters using Kruskal's algorithm
