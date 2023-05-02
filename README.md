@@ -19,3 +19,5 @@ https://www.coursera.org/learn/algorithms-on-graphs
 - Week 5:
   - *Minimal spanning tree*: implemented Kruskal's algorithm using set operations with path compression heuristics
   - *Clustering*: minimal distance between clusters using Kruskal's algorithm
+- Week 6: Project advanced algorithms
+  - 
