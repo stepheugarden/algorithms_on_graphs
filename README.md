@@ -20,4 +20,5 @@ https://www.coursera.org/learn/algorithms-on-graphs
   - *Minimal spanning tree*: implemented Kruskal's algorithm using set operations with path compression heuristics
   - *Clustering*: minimal distance between clusters using Kruskal's algorithm
 - Week 6: Project advanced algorithms
-  - 
+  - *Friend suggestion*: bidirectional Dijkstra 
+  - *Distances with coordiantes*: A* algorithm with euclidean distance as potential function for more directed search

@@ -135,8 +135,6 @@ if __name__ == "__main__":
     else:
         path, files = read_test_cases.return_path_files()
         for file in files:
-            if file == "03":
-                x = 10
             file_path = os.path.join(path, file)
             n, adj, cost, queries = parse_input(file_path)
             bidij = BiDij(n)
