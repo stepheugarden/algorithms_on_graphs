@@ -14,11 +14,11 @@ in_out_degree = namedtuple("in_out_degree", ["indeg", "outdeg"])
 MAXLEN = 2 * 10**6
 
 # preprocessing must take max. 50 seconds
-TIMELIMIT = 55
+TIMELIMIT = 50
 TIMEBUFFER = 1
 
 
-class DistPreprocessLarge:
+class DistPreprocessSmall:
     def __init__(self, n, adj, cost):
         self.n = n
         self.INFINITY = n * MAXLEN
@@ -315,7 +315,7 @@ if __name__ == "__main__":
             adj[1][v - 1].append(u - 1)
             cost[1][v - 1].append(c)
 
-        ch = DistPreprocessLarge(n, adj, cost)
+        ch = DistPreprocessSmall(n, adj, cost)
         print("Ready")
         sys.stdout.flush()
         (t,) = readl()
@@ -327,7 +327,7 @@ if __name__ == "__main__":
         for file in files:
             file_path = os.path.join(path, file)
             n, adj, cost, queries = parse_input(file_path)
-            ch = DistPreprocessLarge(n, adj, cost)
+            ch = DistPreprocessSmall(n, adj, cost)
             res = []
             for s, t in queries:
                 res.append(ch.query(s - 1, t - 1))
